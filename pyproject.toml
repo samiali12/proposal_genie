@@ -1,0 +1,24 @@
+[project]
+name = "proposal_genie"
+version = "0.1.0"
+description = "proposal-genie using crewAI"
+authors = [{ name = "Sami Ali", email = "samijameel100@gmail.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.5.0"
+]
+
+[project.scripts]
+proposal_genie = "proposal_genie.main:run"
+run_crew = "proposal_genie.main:run"
+train = "proposal_genie.main:train"
+replay = "proposal_genie.main:replay"
+test = "proposal_genie.main:test"
+run_with_trigger = "proposal_genie.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
